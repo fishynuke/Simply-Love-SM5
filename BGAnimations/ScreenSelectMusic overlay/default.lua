@@ -6,7 +6,7 @@ local t = Def.ActorFrame{
 
 	-- ---------------------------------------------------
 	--  first, load files that contain no visual elements, just code that needs to run
-
+	LoadActor("./FooterHelpText.lua"),
 	-- MenuButton code for backing out of SelectMusic when in EventMode
 	LoadActor("./EscapeFromEventMode.lua"),
 	-- MenuTimer code for preserving SSM's timer value
