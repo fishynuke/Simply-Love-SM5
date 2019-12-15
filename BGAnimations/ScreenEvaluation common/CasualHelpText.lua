@@ -1,10 +1,10 @@
 if SL.Global.GameMode ~= "Casual" then return end
 
 return Def.BitmapText{
-	Font="_wendy small",
+	Font="_jfonts/_jfonts 16px",
 	Text=THEME:GetString("ScreenEvaluation", "PressStartToContinue"),
 	InitCommand=function(self)
-		self:xy(_screen.cx, _screen.cy + 170):zoom(0.55)
+		self:xy(_screen.cx, _screen.cy + 170):zoom(1.0)
 			:diffusealpha(0):shadowlength(0.5)
 	end,
 	OnCommand=function(self)

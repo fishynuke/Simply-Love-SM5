@@ -17,9 +17,9 @@ local af = Def.ActorFrame{
 	-- "Choose Your Song"
 	Def.BitmapText{
 		Name="HeaderText",
-		Font="_wendy small",
+		Font="_jfonts/_jfonts 16px",
 		Text=text,
-		InitCommand=function(self) self:diffuse(1,1,1,0):zoom(WideScale(0.5,0.6)):horizalign(left):xy(10, 15) end,
+		InitCommand=function(self) self:diffuse(1,1,1,0):zoom(WideScale(0.9,1.0)):horizalign(left):xy(10, 15) end,
 		OffCommand=function(self) self:accelerate(0.33):diffusealpha(0) end,
 		SwitchFocusToSongsMessageCommand=function(self) self:linear(0.1):diffusealpha(0) end,
 		SwitchFocusToGroupsMessageCommand=function(self) self:sleep(0.25):linear(0.1):diffusealpha(1) end,
@@ -29,11 +29,11 @@ local af = Def.ActorFrame{
 -- Stage Number
 if not PREFSMAN:GetPreference("EventMode") then
 	af[#af+1] = Def.BitmapText{
-		Font=PREFSMAN:GetPreference("EventMode") and "_wendy monospace numbers" or "_wendy small",
+		Font=PREFSMAN:GetPreference("EventMode") and "_jfonts/_jfonts 16px" or "_jfonts/_jfonts 16px",
 		Name="Stage Number",
 		Text=SSM_Header_StageText(),
 		InitCommand=function(self)
-			self:diffusealpha(0):halign(1):zoom(0.5):x(_screen.w-8)
+			self:diffusealpha(0):halign(1):zoom(0.9):x(_screen.w-8)
 			if PREFSMAN:GetPreference("MenuTimer") then
 				self:y(44)
 			else

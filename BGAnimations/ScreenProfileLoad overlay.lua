@@ -41,10 +41,10 @@ return Def.ActorFrame{
 	},
 
 	Def.BitmapText{
-		Font="_wendy small",
+		Font="_jfonts/_jfonts 16px",
 		Text=THEME:GetString("ScreenProfileLoad","Loading Profiles..."),
 		InitCommand=function(self)
-			self:diffuse( ThemePrefs.Get("RainbowMode") and Color.White or Color.Black ):zoom(0.6)
+			self:diffuse( ThemePrefs.Get("RainbowMode") and Color.White or Color.Black ):zoom(1.0)
 		end
 	}
 }

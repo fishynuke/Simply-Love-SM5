@@ -1,6 +1,6 @@
-return LoadFont("_wendy small")..{
+return LoadFont("_jfonts/_jfonts 16px")..{
 	InitCommand=function(self)
-		self:xy(_screen.cx,_screen.h-80):zoom(0.7):shadowlength(0.75)
+		self:xy(_screen.cx,_screen.h-80):zoom(1):shadowlength(0.75)
 		self:visible(false):queuecommand("Refresh")
 	end,
 	OnCommand=function(self)

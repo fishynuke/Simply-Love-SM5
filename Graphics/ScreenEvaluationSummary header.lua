@@ -4,9 +4,9 @@ return Def.ActorFrame{
 
 	Def.BitmapText{
 		Name="GameModeText",
-		Font="_wendy small",
+		Font="_jfonts/_jfonts 16px",
 		InitCommand=function(self)
-			self:diffusealpha(0):zoom( WideScale(0.5,0.6)):xy(_screen.w-70, 15):halign(1)
+			self:diffusealpha(0):zoom( WideScale(0.9,1.0)):xy(_screen.w-70, 15):halign(1)
 			if not PREFSMAN:GetPreference("MenuTimer") then
 				self:x(_screen.w-10)
 			end

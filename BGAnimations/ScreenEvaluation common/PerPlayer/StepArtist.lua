@@ -2,8 +2,8 @@ local player = ...
 local text_table = GetStepsCredit(player)
 local marquee_index = 0
 
-return LoadFont("Common Normal")..{
-	InitCommand=function(self) self:zoom(0.7):xy(115,_screen.cy-80) end,
+return LoadFont("_jfonts/_jfonts 16px")..{
+	InitCommand=function(self) self:zoom(0.8):xy(115,_screen.cy-90) end,
 	OnCommand=function(self)
 		-- darken the text for RainbowMode to make it more legible
 		if (ThemePrefs.Get("RainbowMode") and not HolidayCheer()) then self:diffuse(Color.Black) end

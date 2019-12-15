@@ -42,7 +42,7 @@ if EarnedMachineRecord or EarnedPersonalRecord then
 	SL[pn].HighScores.EnteringName = true
 
 	local t = Def.ActorFrame{
-		InitCommand=function(self) self:zoom(0.225) end,
+		InitCommand=function(self) self:zoom(0.8) end,
 		OnCommand=function(self)
 			self:x( player == PLAYER_1 and -45 or 95 )
 			self:y( 54 )
@@ -50,15 +50,15 @@ if EarnedMachineRecord or EarnedPersonalRecord then
 	}
 
 	if HighScoreIndex.Machine+1 > 0 then
-		t[#t+1] = LoadFont("_wendy small")..{
-			Text=string.format("Machine Record %i", HighScoreIndex.Machine+1),
+		t[#t+1] = LoadFont("_jfonts/_jfonts 16px")..{
+			Text=string.format("機器成績 #%i", HighScoreIndex.Machine+1),
 			InitCommand=function(self) self:xy(-110,-18):diffuse(PlayerColor(player)) end,
 		}
 	end
 
 	if HighScoreIndex.Personal+1 > 0 then
-		t[#t+1] = LoadFont("_wendy small")..{
-			Text=string.format("Personal Record %i", HighScoreIndex.Personal+1),
+		t[#t+1] = LoadFont("_jfonts/_jfonts 16px")..{
+			Text=string.format("個人成績 #%i", HighScoreIndex.Personal+1),
 			InitCommand=function(self) self:xy(-110,24):diffuse(PlayerColor(player)) end,
 		}
 	end

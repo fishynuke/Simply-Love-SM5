@@ -57,22 +57,22 @@ local pane = Def.ActorFrame{
 
 -- "Early" text
 pane[#pane+1] = Def.BitmapText{
-	Font="_wendy small",
+	Font="_jfonts/_jfonts 16px",
 	Text=ScreenString("Early"),
 	InitCommand=function(self)
 		self:addx(10):addy(-125)
-			:zoom(0.3)
+			:zoom(0.7)
 			:horizalign(left)
 	end,
 }
 
 -- "Late" text
 pane[#pane+1] = Def.BitmapText{
-	Font="_wendy small",
+	Font="_jfonts/_jfonts 16px",
 	Text=ScreenString("Late"),
 	InitCommand=function(self)
 		self:addx(pane_width-10):addy(-125)
-			:zoom(0.3)
+			:zoom(0.7)
 			:horizalign(right)
 	end,
 }
@@ -183,13 +183,13 @@ end
 
 local label = {}
 label.y = -pane_height+20
-label.zoom = 0.575
+label.zoom = 0.525
 label.padding = 3
 label.max_width = ((pane_width/3)/label.zoom) - ((label.padding/label.zoom)*3)
 
 -- avg_timing_error label
 pane[#pane+1] = Def.BitmapText{
-	Font="Common Normal",
+	Font="_jfonts/_jfonts 16px",
 	Text=ScreenString("MeanTimingError"),
 	InitCommand=function(self)
 		self:x(40):y(label.y)
@@ -203,7 +203,7 @@ pane[#pane+1] = Def.BitmapText{
 
 -- median_offset label
 pane[#pane+1] = Def.BitmapText{
-	Font="Common Normal",
+	Font="_jfonts/_jfonts 16px",
 	Text=ScreenString("Median"),
 	InitCommand=function(self)
 		self:x(pane_width/2):y(label.y)
@@ -213,7 +213,7 @@ pane[#pane+1] = Def.BitmapText{
 
 -- mode_offset label
 pane[#pane+1] = Def.BitmapText{
-	Font="Common Normal",
+	Font="_jfonts/_jfonts 16px",
 	Text=ScreenString("Mode"),
 	InitCommand=function(self)
 		self:x(pane_width-40):y(label.y)

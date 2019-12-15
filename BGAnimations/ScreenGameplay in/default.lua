@@ -60,7 +60,7 @@ af[#af+1] = Def.ActorFrame{
 	}
 }
 
-af[#af+1] = LoadFont("_wendy small")..{
+af[#af+1] = LoadFont("_jfonts/_jfonts 16px")..{
 	Text=text,
 	InitCommand=function(self) self:Center():diffusealpha(0):shadowlength(1) end,
 	OnCommand=function(self)
@@ -68,7 +68,7 @@ af[#af+1] = LoadFont("_wendy small")..{
 		if not SL.Global.GameplayReloadCheck then
 			self:accelerate(0.5):diffusealpha(1):sleep(0.66):accelerate(0.33)
 		end
-		self:zoom(0.4):y(_screen.h-30)
+		self:zoom(1.0):y(_screen.h-30)
 	end,
 	CurrentSongChangedMessageCommand=function(self)
 		if GAMESTATE:IsCourseMode() then

@@ -52,10 +52,10 @@ local t = Def.ActorFrame{
 
 	LoadActor( THEME:GetPathB("", "Triangles.lua") ),
 
-	LoadFont("_wendy small")..{
+	LoadFont("_jfonts/_jfonts 16px")..{
 		Name="PageNumber",
 		Text=("%s %i/%i"):format(page_text, page, pages),
-		InitCommand=function(self) self:diffusealpha(0):zoom(WideScale(0.5,0.6)):xy(_screen.cx, 15) end,
+		InitCommand=function(self) self:diffusealpha(0):zoom(WideScale(0.9,1.0)):xy(_screen.cx, 15) end,
 		OnCommand=function(self) self:sleep(0.1):decelerate(0.33):diffusealpha(1) end,
 		OffCommand=function(self) self:accelerate(0.33):diffusealpha(0) end,
 		HideCommand=function(self) self:sleep(0.5):settext( ("%s %i/%i"):format(page_text, page, pages) ) end

@@ -153,7 +153,7 @@ end
 local af = Def.ActorFrame{
 	Enabled = false,
 	InitCommand=function(self)
-		self:zoom(0.5):xy( frame_x, _screen.cy + WideScale(0,10) )
+		self:zoom(0.8):xy( frame_x, _screen.cy + WideScale(0,10) )
 
 		if ThemePrefs.Get("VisualTheme")=="Gay" and not HolidayCheer() then
 			self:bob():effectmagnitude(0,0,0):effectclock('bgm'):effectperiod(0.666)
@@ -171,7 +171,7 @@ local af = Def.ActorFrame{
 		end
 	end,
 	LoseFocusCommand=function(self)
-		self:linear(0.125):zoom(0.5):effectmagnitude(0,0,0)
+		self:linear(0.125):zoom(0.8):effectmagnitude(0,0,0)
 	end,
 	EnableCommand=function(self)
 		if self.Enabled then
@@ -181,10 +181,10 @@ local af = Def.ActorFrame{
 		end
 	 end,
 
-	LoadFont("_wendy small")..{
+	LoadFont("_jfonts/_jfonts 16px")..{
 		Text=THEME:GetString("ScreenSelectStyle", choiceName:gsub("^%l", string.upper)),
 		InitCommand=function(self)
-			self:shadowlength(1):y(37):zoom(0.5)
+			self:shadowlength(1):y(37):zoom(0.8)
 		end,
 	}
 }
