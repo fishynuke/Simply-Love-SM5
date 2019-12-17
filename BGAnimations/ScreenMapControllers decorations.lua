@@ -60,12 +60,12 @@ for i,player in ipairs({PLAYER_1, PLAYER_2}) do
 		end
 	}
 
-	af[#af+1] = LoadFont("_wendy small")..{
+	af[#af+1] = LoadFont("_jfonts/_jfonts 16px")..{
 		Text=("%s %i"):format(THEME:GetString("ScreenTestInput", "Player"), PlayerNumber:Reverse()[player]+1),
 		InitCommand=function(self)
 			self:halign(PlayerNumber:Reverse()[OtherPlayer[player]])
 				:x(_screen.cx + 110 * (player==PLAYER_1 and -1 or 1) )
-				:y(headerHeight/2):zoom(0.8):diffusealpha(0)
+				:y(headerHeight/2):zoom(1.0):diffusealpha(0)
 		end,
 		OnCommand=function(self) self:linear(0.5):diffusealpha(1) end,
 		OffCommand=function(self) self:linear(0.5):diffusealpha(0) end,
