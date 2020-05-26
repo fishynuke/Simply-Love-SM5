@@ -4,14 +4,19 @@
 ## About
 
 This is a self-customized Simply Love (v4.8.6) theme to support Chinese(Traditional) display.
-Some fonts and lua files have to be modified so I can't just translate the ini lang file.
+Some fonts and lua files have to be modified to make Chinese texts look nice.
+I can't just translate the ini lang file to do the job.
 
 You will have to replace the zh.ini in Themes\_fallback\Languages. The file will be uploaded soon. But I'll find a way to avoid doing this.
 
 ## Notice
 
-This repo is still being work in progress. Please wait for a release.
+This customized theme still needs to be tested. Please wait for a release.
 
+
+## Updates
+
+The original theme has upgraded to v4.8.7, so is this one :)
 
 
 # Simply Love (StepMania 5) 繁體中文定制版
@@ -26,4 +31,8 @@ This repo is still being work in progress. Please wait for a release.
 
 ## 注意
 
-該主題還在製作中，請等待Release，不着急下載。
+該主題還在測試中，請等待Release。
+
+## 升級
+
+原版主題版本已升級至v4.8.7，本中文定制版也已更新 :)

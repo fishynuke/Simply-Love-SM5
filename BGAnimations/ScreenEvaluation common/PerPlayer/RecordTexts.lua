@@ -51,15 +51,15 @@ if EarnedMachineRecord or EarnedPersonalRecord then
 
 	if HighScoreIndex.Machine+1 > 0 then
 		t[#t+1] = LoadFont("_jfonts/_jfonts 16px")..{
-			Text=string.format("機器成績 #%i", HighScoreIndex.Machine+1),
+			Text=string.format("機器成績 %i", HighScoreIndex.Machine+1),
 			InitCommand=function(self) self:xy(-110,-18):diffuse(PlayerColor(player)) end,
 		}
 	end
 
 	if HighScoreIndex.Personal+1 > 0 then
 		t[#t+1] = LoadFont("_jfonts/_jfonts 16px")..{
-			Text=string.format("個人成績 #%i", HighScoreIndex.Personal+1),
-			InitCommand=function(self) self:xy(-110,24):diffuse(PlayerColor(player)) end,
+			Text=string.format("個人成績 %i", HighScoreIndex.Personal+1),
+			InitCommand=function(self) self:xy(-110,18):diffuse(PlayerColor(player)) end,
 		}
 	end
 
