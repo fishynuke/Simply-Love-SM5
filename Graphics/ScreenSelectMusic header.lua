@@ -40,11 +40,23 @@ if PREFSMAN:GetPreference("EventMode") then
 		Name="Session Timer",
 		InitCommand=function(self)
 			bmt_actor = self
-			if PREFSMAN:GetPreference("EventMode") then
-				self:diffusealpha(0):zoom( WideScale(0.9,1.0) ):xy(_screen.cx, WideScale(15,14))
-			else
-				self:diffusealpha(0):zoom( WideScale(0.9,1.0) ):xy(_screen.cx, 15)
-			end
+			self:zoom( WideScale(0.9,1.0) ):y( WideScale(3.15,3.5)/self:GetZoom() )
+			self:diffusealpha(0):xy(_screen.cx, 15)
+		end,
+		OnCommand=function(self)
+			self:sleep(0.1):decelerate(0.33):diffusealpha(1)
+		end,
+	}
+
+-- stage number when not EventMode
+else
+
+	af[#af+1] = LoadFont("_jfonts/_jfonts 16px")..{
+		Name="Stage Number",
+		Text=SSM_Header_StageText(),
+		InitCommand=function(self)
+			self:zoom( WideScale(0.9,1.0) ):y( WideScale(3.15,3.5)/self:GetZoom() )
+			self:diffusealpha(0):xy(_screen.cx, 15)
 		end,
 		OnCommand=function(self)
 			self:sleep(0.1):decelerate(0.33):diffusealpha(1)
